@@ -1,0 +1,116 @@
+
+@import "../bower_components/bootstrap/less/normalize.less";
+@import url(http://fonts.googleapis.com/css?family=La+Belle+Aurore);
+@import url(http://fonts.googleapis.com/css?family=Nunito:300,400);
+
+* {
+  cursor: default;
+}
+
+body {
+  font-family: 'La Belle Aurore', cursive;
+  color: #5b57a5;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.header {
+  position: relative;
+
+  .background,
+  .foreground {
+    width: 100%;
+    height: 642px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 320px 642px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .background {
+    background-image: url('../img/background.jpg');
+  }
+
+  .midground {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    width: 100%;
+    height: 263px;
+    background-image: url('../img/ka.png');
+    background-repeat: repeat-x;
+    background-size: 728px 263px;
+    background-position: center;
+  }
+
+  .foreground {
+    background-image: url('../img/foreground.png');
+  }
+}
+
+.tiny {
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  cursor: pointer;
+  color: #fdc259;
+
+  &:hover {
+    color: darken(#fdc259, 20%);
+  }
+
+  &:active {
+    color: darken(#fdc259, 30%);
+  }
+}
+
+b {
+  font-weight: 400;
+}
+
+.h1 {
+  font-size: 30px;
+}
+
+.zero {
+  line-height: 0;
+}
+
+.content {
+  width: 320px - 80px;
+  margin: auto;
+  height: 500px;
+  padding-top: 642px;
+
+  p {
+    margin: 30px 0;
+
+    &:first-child {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+
+  .header {
+
+    .midground {
+      height: 145px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: 228px 79px;
+      background-repeat: no-repeat;
+      background-image: url('../img/ka-small.png');
+    }
+  }
+}
